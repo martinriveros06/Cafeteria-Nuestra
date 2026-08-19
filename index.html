@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Nuestro</title>
-    <!-- Para evitar que el navegador guarde en caché el CSS viejo durante las pruebas -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=2.0"> <!-- El ?v=2.0 fuerza a cargar el CSS nuevo -->
+    <link rel="stylesheet" href="style.css?v=2.1">
 </head>
 <body>
+    <!-- Navbar Oscuro -->
     <header class="navbar">
         <div class="logo-container">
-            <!-- Si el logo no carga, verifica que el nombre sea exactamente logo_extraido_web.png con minúsculas -->
             <img src="logo_extraido_web.png" alt="Logo Café Nuestro" class="logo-img">
         </div>
         <nav class="nav-links">
             <a href="#inicio">Inicio</a>
-            <a href="#carta">Carta</a>
+            <a href="#menu-completo">Carta Completa</a>
             <a href="#conocenos">Conócenos</a>
             <a href="#contacto">Contacto</a>
         </nav>
@@ -29,95 +28,130 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="inicio" class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tomando-cafe.png');">
         <div class="hero-content">
             <h1 class="logo-font">Café Nuestro</h1>
             <p class="hero-subtitle">Sin duda querrás volver</p>
-            <a href="#menu-completo" class="btn-green">Hacer un pedido</a>
+            <a href="#menu-completo" class="btn-green">Ver Carta Completa</a>
         </div>
     </section>
 
+    <!-- Tira de Categorías -->
     <div class="category-strip">
         Café de especialidad - Bollería artesanal - Panadería - Desayunos
     </div>
 
-    <!-- Recomendaciones -->
+    <!-- Sección: Promociones Destacadas -->
     <section class="recomendaciones-section">
-        <h2 class="section-title">Recomendaciones del Chef</h2>
+        <h2 class="section-title">Nuestras Promociones</h2>
         <div class="card-grid">
             <div class="product-card">
-                <img src="foto_latte.jpg" alt="Latte" class="card-img">
+                <img src="foto_promo1.jpg" alt="Promo 1" class="card-img">
                 <div class="card-body">
-                    <h3>LATTE CLÁSICO</h3>
-                    <p>Suave café de especialidad con leche perfectamente texturizada.</p>
-                    <span class="price">$3.500</span>
-                    <a href="#menu-completo" class="ver-producto">Ver producto ></a>
+                    <h3>PROMO 1</h3>
+                    <p>Bebida caliente a elección + Medialuna.</p>
+                    <span class="price">$3.490</span>
+                    <a href="#menu-completo" class="ver-producto">Ver detalle ></a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="foto_croissant.jpg" alt="Croissant" class="card-img">
+                <img src="foto_promo2.jpg" alt="Promo 2" class="card-img">
                 <div class="card-body">
-                    <h3>CROISSANT BI COLOR</h3>
-                    <p>Masa de hojaldre crujiente con toques de cacao y rojo, horneado hoy.</p>
-                    <span class="price">$2.000</span>
-                    <a href="#menu-completo" class="ver-producto">Ver producto ></a>
+                    <h3>PROMO 2</h3>
+                    <p>Bebida caliente a elección + Bollería a elección.</p>
+                    <span class="price">$3.590</span>
+                    <a href="#menu-completo" class="ver-producto">Ver detalle ></a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="foto_promo3.jpg" alt="Promo 3" class="card-img">
+                <div class="card-body">
+                    <h3>PROMO 3</h3>
+                    <p>Bebida caliente a elección + Sandwich Ciabatta rústica (Pastelería).</p>
+                    <span class="price">$4.590</span>
+                    <a href="#menu-completo" class="ver-producto">Ver detalle ></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Nuestra Carta (Accesos directos) -->
-    <section id="carta" class="carta-section">
-        <h2 class="section-title">Nuestra Carta</h2>
-        <div class="carta-grid">
-            <a href="#menu-completo" class="carta-item" style="background-image: url('cafe_arte.png');">
-                <div class="carta-overlay">{Cafetería} Extracción perfecta.</div>
-            </a>
-            <!-- Añadí un color de fondo verde por si la foto sigue fallando -->
-            <a href="#menu-completo" class="carta-item" style="background-color: #5b6c56; background-image: url('bolleria.png');">
-                <div class="carta-overlay">{Bollería} Horneada diariamente.</div>
-            </a>
-            <a href="#menu-completo" class="carta-item" style="background-image: url('cafe.png');">
-                <div class="carta-overlay">{Desayunos y Sándwiches}</div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Menú Completo (Restaurado para que se vean los precios) -->
+    <!-- Menú Completo -->
     <section id="menu-completo" class="full-menu-section">
-        <h2 class="section-title">Menú Detallado</h2>
+        <h2 class="section-title">Carta Completa</h2>
         
+        <!-- Categoría: Cafetería -->
         <h3 class="menu-category-title">Cafetería</h3>
         <div class="menu-list-grid">
             <div class="menu-list-item"><h4>Espresso</h4><span class="price">$2.500</span></div>
-            <div class="menu-list-item"><h4>Latte</h4><span class="price">$3.500</span></div>
+            <div class="menu-list-item"><h4>Espresso doble</h4><span class="price">$3.000</span></div>
+            <div class="menu-list-item"><h4>Espresso macchiato</h4><span class="price">$2.800</span></div>
+            <div class="menu-list-item"><h4>Americano</h4><span class="price">$2.600</span></div>
+            <div class="menu-list-item"><h4>Americano doble</h4><span class="price">$3.000</span></div>
             <div class="menu-list-item"><h4>Cappuccino</h4><span class="price">$3.200</span></div>
-            <div class="menu-list-item"><h4>Chocolate Caliente</h4><span class="price">$3.800</span></div>
+            <div class="menu-list-item"><h4>Cortado</h4><span class="price">$2.800</span></div>
+            <div class="menu-list-item"><h4>Latte</h4><span class="price">$3.500</span></div>
+            <div class="menu-list-item"><h4>Latte Vainilla</h4><span class="price">$4.000</span></div>
+            <div class="menu-list-item"><h4>Moccacino</h4><span class="price">$3.600</span></div>
+            <div class="menu-list-item"><h4>Cappuccino Vainilla</h4><span class="price">$3.800</span></div>
+            <div class="menu-list-item"><h4>Chai latte</h4><span class="price">$3.500</span></div>
+            <div class="menu-list-item"><h4>Chocolate caliente</h4><span class="price">$3.800</span></div>
+            <div class="menu-list-item"><h4>Té</h4><span class="price">$2.000</span></div>
+            <div class="menu-list-item"><h4>Infusiones</h4><span class="price">$2.000</span></div>
+            <div class="menu-list-item"><h4>Té con leche</h4><span class="price">$2.500</span></div>
+            <div class="menu-list-item"><h4>Bebidas</h4><span class="price">$1.500</span></div>
+            <div class="menu-list-item"><h4>Extras: Shot de café</h4><span class="price">$500</span></div>
+            <div class="menu-list-item"><h4>Extras: Latte</h4><span class="price">$500</span></div>
         </div>
 
+        <!-- Categoría: Bollería -->
         <h3 class="menu-category-title mt-4">Bollería</h3>
         <div class="menu-list-grid">
-            <div class="menu-list-item"><h4>Galletón NY</h4><span class="price">$2.500</span></div>
-            <div class="menu-list-item"><h4>Croissant Bi Color</h4><span class="price">$2.000</span></div>
+            <div class="menu-list-item"><h4>Pan de chocolate (12 cms)</h4><span class="price">$2.200</span></div>
+            <div class="menu-list-item"><h4>Galletón NY (Variedades)</h4><span class="price">$2.500</span></div>
+            <div class="menu-list-item"><h4>Galletas NY (3 unidades)</h4><span class="price">$2.000</span></div>
+            <div class="menu-list-item"><h4>Brownie</h4><span class="price">$2.000</span></div>
             <div class="menu-list-item"><h4>Rollo de canela</h4><span class="price">$2.000</span></div>
+            <div class="menu-list-item"><h4>Rollo de canela (grande)</h4><span class="price">$2.500</span></div>
+            <div class="menu-list-item"><h4>Muffins (Variedades)</h4><span class="price">$1.800</span></div>
             <div class="menu-list-item"><h4>Medialuna</h4><span class="price">$1.800</span></div>
+            <div class="menu-list-item"><h4>Croissant Bi Color (Cacao/rojo)</h4><span class="price">$2.000</span></div>
+            <div class="menu-list-item"><h4>Pie de limón</h4><span class="price">$3.000</span></div>
+        </div>
+
+        <!-- Categoría: Sándwiches y Desayunos -->
+        <h3 class="menu-category-title mt-4">Sándwiches y Desayunos</h3>
+        <div class="menu-list-grid">
+            <div class="menu-list-item"><h4>Croissant jamón/queso</h4><span class="price">$4.900</span></div>
+            <div class="menu-list-item"><h4>Planchado jamón/queso</h4><span class="price">$4.500</span></div>
+            <div class="menu-list-item"><h4>Desayuno 1 <br><small>Bebida caliente + Panes mini + Bollería</small></h4><span class="price">$4.990</span></div>
+            <div class="menu-list-item"><h4>Desayuno 2 <br><small>Bebida caliente + Planchado jamón queso + Bollería</small></h4><span class="price">$5.990</span></div>
+            <div class="menu-list-item"><h4>Desayuno 3 <br><small>Bebida caliente + Croissant jamón queso + Bollería</small></h4><span class="price">$6.990</span></div>
         </div>
     </section>
 
-    <!-- Conócenos -->
+    <!-- Conócenos (Con los párrafos separados como pediste) -->
     <section id="conocenos" class="about-section">
         <div class="about-box">
             <h2 class="section-title">Quiénes Somos</h2>
             <p>En <strong>Café Nuestro</strong> no dejamos las cosas al azar.</p>
-            <p>Extraemos lo mejor de cada grano en un ambiente diseñado para que hagas una pausa en tu dia, trabajes o que simplemente puedas compartir con amigos o contigo.</p>
-            <p> Con panadería propia y bollería artesanal, cada detalle está pensado para ofrecerte calidad real todos los días en Av. Vitacura.</p>
+            <br>
+            <p>Extraemos lo mejor de cada grano en un ambiente diseñado para que hagas una pausa en tu día, trabajes o que simplemente puedas compartir con amigos o contigo.</p>
+            <br>
+            <p>Con panadería propia y bollería artesanal, cada detalle está pensado para ofrecerte calidad real todos los días en Av. Vitacura.</p>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer-dark">
         <div class="footer-bottom">
             <p>© 2026 Café Nuestro. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/56900000000" class="whatsapp-btn" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 </body>
 </html>
