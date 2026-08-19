@@ -9,17 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=2.1">
+    <link rel="stylesheet" href="style.css?v=2.3">
 </head>
 <body>
-    <!-- Navbar Oscuro -->
     <header class="navbar">
         <div class="logo-container">
             <img src="logo_extraido_web.png" alt="Logo Café Nuestro" class="logo-img">
         </div>
         <nav class="nav-links">
             <a href="#inicio">Inicio</a>
-            <a href="#menu-completo">Carta Completa</a>
+            <a href="#menu-navegacion">Carta</a>
             <a href="#conocenos">Conócenos</a>
             <a href="#contacto">Contacto</a>
         </nav>
@@ -28,60 +27,72 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="inicio" class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tomando-cafe.png');">
         <div class="hero-content">
             <h1 class="logo-font">Café Nuestro</h1>
             <p class="hero-subtitle">Sin duda querrás volver</p>
-            <a href="#menu-completo" class="btn-green">Ver Carta Completa</a>
+            <a href="#menu-navegacion" class="btn-green">Ver Carta Completa</a>
         </div>
     </section>
 
-    <!-- Tira de Categorías -->
     <div class="category-strip">
         Café de especialidad - Bollería artesanal - Panadería - Desayunos
     </div>
 
-    <!-- Sección: Promociones Destacadas -->
-    <section class="recomendaciones-section">
-        <h2 class="section-title">Nuestras Promociones</h2>
+    <!-- Navegación Visual (Las 4 Tarjetas Grandes) -->
+    <section id="menu-navegacion" class="carta-section">
+        <h2 class="section-title">Nuestra Carta</h2>
+        <div class="carta-grid">
+            <a href="#promociones" class="carta-item" style="background-image: url('promociones.png');">
+                <div class="carta-overlay">{Promociones} Ver ofertas.</div>
+            </a>
+            <a href="#cat-cafeteria" class="carta-item" style="background-image: url('cafe_arte.png');">
+                <div class="carta-overlay">{Cafetería} Extracción perfecta.</div>
+            </a>
+            <a href="#cat-bolleria" class="carta-item" style="background-color: #5b6c56; background-image: url('bolleria.jpg');">
+                <div class="carta-overlay">{Bollería} Horneada diariamente.</div>
+            </a>
+            <a href="#cat-sandwiches" class="carta-item" style="background-image: url('cafe.png');">
+                <div class="carta-overlay">{Sándwiches y Desayunos} Para empezar el día.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Promociones Destacadas -->
+    <section id="promociones" class="recomendaciones-section">
+        <h2 class="section-title">Promociones</h2>
         <div class="card-grid">
             <div class="product-card">
-                <img src="foto_promo1.jpg" alt="Promo 1" class="card-img">
+                <img src="bebida_medialuna.png" alt="Promo 1" class="card-img">
                 <div class="card-body">
                     <h3>PROMO 1</h3>
                     <p>Bebida caliente a elección + Medialuna.</p>
                     <span class="price">$3.490</span>
-                    <a href="#menu-completo" class="ver-producto">Ver detalle ></a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="foto_promo2.jpg" alt="Promo 2" class="card-img">
+                <img src="cafe_bolleria.png" alt="Promo 2" class="card-img">
                 <div class="card-body">
                     <h3>PROMO 2</h3>
                     <p>Bebida caliente a elección + Bollería a elección.</p>
                     <span class="price">$3.590</span>
-                    <a href="#menu-completo" class="ver-producto">Ver detalle ></a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="foto_promo3.jpg" alt="Promo 3" class="card-img">
+                <img src="ciabatta.jpg" alt="Promo 3" class="card-img">
                 <div class="card-body">
                     <h3>PROMO 3</h3>
-                    <p>Bebida caliente a elección + Sandwich Ciabatta rústica (Pastelería).</p>
+                    <p>Bebida caliente a elección + Sandwich Ciabatta rústica.</p>
                     <span class="price">$4.590</span>
-                    <a href="#menu-completo" class="ver-producto">Ver detalle ></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Menú Completo -->
-    <section id="menu-completo" class="full-menu-section">
-        <h2 class="section-title">Carta Completa</h2>
+    <!-- Menú Detallado -->
+    <section class="full-menu-section">
         
-        <!-- Categoría: Cafetería -->
-        <h3 class="menu-category-title">Cafetería</h3>
+        <h3 id="cat-cafeteria" class="menu-category-title">Cafetería</h3>
         <div class="menu-list-grid">
             <div class="menu-list-item"><h4>Espresso</h4><span class="price">$2.500</span></div>
             <div class="menu-list-item"><h4>Espresso doble</h4><span class="price">$3.000</span></div>
@@ -104,8 +115,7 @@
             <div class="menu-list-item"><h4>Extras: Latte</h4><span class="price">$500</span></div>
         </div>
 
-        <!-- Categoría: Bollería -->
-        <h3 class="menu-category-title mt-4">Bollería</h3>
+        <h3 id="cat-bolleria" class="menu-category-title mt-4">Bollería</h3>
         <div class="menu-list-grid">
             <div class="menu-list-item"><h4>Pan de chocolate (12 cms)</h4><span class="price">$2.200</span></div>
             <div class="menu-list-item"><h4>Galletón NY (Variedades)</h4><span class="price">$2.500</span></div>
@@ -119,8 +129,7 @@
             <div class="menu-list-item"><h4>Pie de limón</h4><span class="price">$3.000</span></div>
         </div>
 
-        <!-- Categoría: Sándwiches y Desayunos -->
-        <h3 class="menu-category-title mt-4">Sándwiches y Desayunos</h3>
+        <h3 id="cat-sandwiches" class="menu-category-title mt-4">Sándwiches y Desayunos</h3>
         <div class="menu-list-grid">
             <div class="menu-list-item"><h4>Croissant jamón/queso</h4><span class="price">$4.900</span></div>
             <div class="menu-list-item"><h4>Planchado jamón/queso</h4><span class="price">$4.500</span></div>
@@ -130,7 +139,7 @@
         </div>
     </section>
 
-    <!-- Conócenos (Con los párrafos separados como pediste) -->
+    <!-- Conócenos -->
     <section id="conocenos" class="about-section">
         <div class="about-box">
             <h2 class="section-title">Quiénes Somos</h2>
@@ -142,14 +151,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-dark">
         <div class="footer-bottom">
             <p>© 2026 Café Nuestro. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Botón Flotante WhatsApp -->
     <a href="https://wa.me/56900000000" class="whatsapp-btn" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
