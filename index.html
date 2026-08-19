@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Nuestro</title>
+    <!-- Importación de fuentes: Montserrat (textos) y Playfair Display (títulos tipo logo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Iconos para WhatsApp y Menú -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,26 +29,25 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('tomando-cafe.png');">
+    <section id="inicio" class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tomando-cafe.png');">
         <div class="hero-content">
-            <h1>Café Nuestro</h1>
-            <h2>Sin duda querrás volver</h2>
-            <a href="#carta" class="btn-dark">Hacer un pedido</a>
+            <h1 class="logo-font">Café Nuestro</h1>
+            <p class="hero-subtitle">Sin duda querrás volver</p>
+            <a href="#carta" class="btn-green">Hacer un pedido</a>
         </div>
     </section>
 
-    <!-- Tira de Categorías -->
+    <!-- Tira de Categorías (Verde Corporativo) -->
     <div class="category-strip">
         Café de especialidad - Bollería artesanal - Panadería - Desayunos
     </div>
 
-    <!-- Sección: Recomendaciones del Chef (Tarjetas con foto) -->
+    <!-- Sección: Recomendaciones -->
     <section class="recomendaciones-section">
         <h2 class="section-title">Recomendaciones del Chef</h2>
         <div class="card-grid">
-            <!-- Tarjeta 1 -->
             <div class="product-card">
-                <img src="foto_latte.jpg" alt="Latte" class="card-img"> <!-- FOTO PENDIENTE -->
+                <img src="foto_latte.jpg" alt="Latte" class="card-img">
                 <div class="card-body">
                     <h3>LATTE CLÁSICO</h3>
                     <p>Suave café de especialidad con leche perfectamente texturizada.</p>
@@ -56,9 +55,8 @@
                     <a href="#" class="ver-producto">Ver producto ></a>
                 </div>
             </div>
-            <!-- Tarjeta 2 -->
             <div class="product-card">
-                <img src="foto_croissant.jpg" alt="Croissant Bi Color" class="card-img"> <!-- FOTO PENDIENTE -->
+                <img src="foto_croissant.jpg" alt="Croissant Bi Color" class="card-img">
                 <div class="card-body">
                     <h3>CROISSANT BI COLOR</h3>
                     <p>Masa de hojaldre crujiente con toques de cacao y rojo, horneado hoy.</p>
@@ -66,9 +64,8 @@
                     <a href="#" class="ver-producto">Ver producto ></a>
                 </div>
             </div>
-            <!-- Tarjeta 3 -->
             <div class="product-card">
-                <img src="foto_galleton.jpg" alt="Galletón NY" class="card-img"> <!-- FOTO PENDIENTE -->
+                <img src="foto_galleton.jpg" alt="Galletón NY" class="card-img">
                 <div class="card-body">
                     <h3>GALLETÓN NY</h3>
                     <p>Pistacho, Red Velvet o Chocolate. Relleno abundante y masa suave.</p>
@@ -76,9 +73,8 @@
                     <a href="#" class="ver-producto">Ver producto ></a>
                 </div>
             </div>
-            <!-- Tarjeta 4 -->
             <div class="product-card">
-                <img src="foto_desayuno.jpg" alt="Desayuno" class="card-img"> <!-- FOTO PENDIENTE -->
+                <img src="foto_desayuno.jpg" alt="Desayuno" class="card-img">
                 <div class="card-body">
                     <h3>DESAYUNO 1</h3>
                     <p>Bebida caliente, panes mini, palta y bollería a tu elección.</p>
@@ -89,7 +85,7 @@
         </div>
     </section>
 
-    <!-- Sección: Nuestra Carta (Grilla de imágenes) -->
+    <!-- Sección: Nuestra Carta -->
     <section id="carta" class="carta-section">
         <h2 class="section-title">Nuestra Carta</h2>
         <div class="carta-grid">
@@ -105,13 +101,13 @@
         </div>
     </section>
 
-    <!-- Sección: Conócenos (En su "burbuja" o contenedor) -->
+    <!-- Sección: Conócenos -->
     <section id="conocenos" class="about-section">
         <div class="about-box">
-            <h2>Quiénes Somos</h2>
-            <p>En <strong>Café Nuestro</strong> no dejamos las cosas al azar.</p>
-            <p>Extraemos lo mejor de cada grano en un ambiente diseñado para que hagas una pausa en tu día, trabajes o simplemente compartas.</p>
-            <p>Con panadería propia y bollería artesanal, cada detalle está pensado para ofrecerte calidad real todos los días.</p>
+            <h2 class="section-title">Quiénes Somos</h2>
+            <p> En <strong>Café Nuestro</strong> no dejamos las cosas al azar. </p>
+            <p> Extraemos lo mejor de cada grano en un ambiente diseñado para que hagas una pausa en tu dia, trabajes o simplemente puedas compartir. </p>
+            <p> Con panadería propia y bollería artesanal, cada detalle está pensado para ofrecerte calidad real todos los días en Av. Vitacura. </p>
         </div>
     </section>
 
