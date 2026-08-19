@@ -3,100 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Nuestro | Especialidad y Bollería</title>
-    <!-- Integración de Google Fonts -->
+    <title>Café Nuestro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos para WhatsApp y Menú -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar Oscuro -->
     <header class="navbar">
         <div class="logo-container">
             <img src="logo_extraido_web.png" alt="Logo Café Nuestro" class="logo-img">
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#quienes-somos">Quiénes Somos</a></li>
-                <li><a href="#menu">Menú</a></li>
-            </ul>
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#carta">Carta</a>
+            <a href="#conocenos">Conócenos</a>
+            <a href="#contacto">Contacto</a>
         </nav>
+        <div class="nav-icons">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </div>
     </header>
 
-    <!-- Inicio / Hero Section -->
-    <section id="inicio" class="hero">
+    <!-- Hero Section -->
+    <section id="inicio" class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('tomando-cafe.png');">
         <div class="hero-content">
-            <h1>Bienvenido a Café Nuestro</h1>
-            <p>Café de especialidad • Bollería artesanal • Pan caliente todo el día</p>
-            <a href="#menu" class="btn">Ver Menú Digital</a>
+            <h1>Café Nuestro - Sin duda querrás volver</h1>
+            <a href="#carta" class="btn-dark">Hacer un pedido</a>
         </div>
     </section>
 
-    <!-- Sección: Quiénes Somos -->
-    <section id="quienes-somos" class="about-section">
-        <div class="about-container">
-            <div class="about-text">
-                <h2>Quiénes Somos</h2>
-                <p>Somos <strong>Café Nuestro</strong>, un espacio dedicado a los amantes del buen café y la panadería artesanal. Nos enorgullece ofrecer café de especialidad, extraído con la máxima precisión para resaltar las mejores notas de cada grano.</p>
-                <p>Acompañamos nuestras bebidas con bollería artesanal y pan caliente horneado todos los días, creando el ambiente perfecto para tu rutina, tu trabajo o para compartir una buena charla.</p>
+    <!-- Tira de Categorías -->
+    <div class="category-strip">
+        Café de especialidad - Bollería artesanal - Panadería - Desayunos
+    </div>
+
+    <!-- Sección: Recomendaciones del Chef (Tarjetas con foto) -->
+    <section class="recomendaciones-section">
+        <h2 class="section-title">Recomendaciones del Chef</h2>
+        <div class="card-grid">
+            <!-- Tarjeta 1 -->
+            <div class="product-card">
+                <img src="foto_latte.jpg" alt="Latte" class="card-img"> <!-- FOTO PENDIENTE -->
+                <div class="card-body">
+                    <h3>LATTE CLÁSICO</h3>
+                    <p>Suave café de especialidad con leche perfectamente texturizada.</p>
+                    <span class="price">$3.500</span>
+                    <a href="#" class="ver-producto">Ver producto ></a>
+                </div>
             </div>
-            <div class="about-image-wrapper">
-                <img src="cafe_arte.png" alt="Barista preparando café" class="about-img">
+            <!-- Tarjeta 2 -->
+            <div class="product-card">
+                <img src="foto_croissant.jpg" alt="Croissant Bi Color" class="card-img"> <!-- FOTO PENDIENTE -->
+                <div class="card-body">
+                    <h3>CROISSANT BI COLOR</h3>
+                    <p>Masa de hojaldre crujiente con toques de cacao y rojo, horneado hoy.</p>
+                    <span class="price">$2.000</span>
+                    <a href="#" class="ver-producto">Ver producto ></a>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="product-card">
+                <img src="foto_galleton.jpg" alt="Galletón NY" class="card-img"> <!-- FOTO PENDIENTE -->
+                <div class="card-body">
+                    <h3>GALLETÓN NY</h3>
+                    <p>Pistacho, Red Velvet o Chocolate. Relleno abundante y masa suave.</p>
+                    <span class="price">$2.500</span>
+                    <a href="#" class="ver-producto">Ver producto ></a>
+                </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="product-card">
+                <img src="foto_desayuno.jpg" alt="Desayuno" class="card-img"> <!-- FOTO PENDIENTE -->
+                <div class="card-body">
+                    <h3>DESAYUNO 1</h3>
+                    <p>Bebida caliente, panes mini, palta y bollería a tu elección.</p>
+                    <span class="price">$4.990</span>
+                    <a href="#" class="ver-producto">Ver producto ></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Menú Digital Completo -->
-    <section id="menu" class="menu-section">
-        <h2 class="section-title">Nuestro Menú</h2>
-        
-        <!-- Categoría 1: Cafetería -->
-        <h3 class="category-title">Cafetería</h3>
-        <div class="menu-grid">
-            <div class="menu-card"><div class="item-info"><h4>Espresso</h4></div><span class="price">$2.500</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Espresso doble</h4></div><span class="price">$3.000</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Americano</h4></div><span class="price">$2.600</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Cappuccino</h4></div><span class="price">$3.200</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Latte</h4></div><span class="price">$3.500</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Latte Vainilla</h4></div><span class="price">$4.000</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Chocolate caliente</h4></div><span class="price">$3.800</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Té con leche</h4></div><span class="price">$2.500</span></div>
-        </div>
-
-        <!-- Categoría 2: Bollería -->
-        <h3 class="category-title mt-4">Bollería</h3>
-        <img src="bolleria.jpg" alt="Selección de bollería" class="category-banner">
-        <div class="menu-grid">
-            <div class="menu-card"><div class="item-info"><h4>Croissant Bi Color</h4><p>Cacao/rojo</p></div><span class="price">$2.000</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Galletón NY</h4><p>Chocolate, Avellana, Pistacho, Red Velvet</p></div><span class="price">$2.500</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Pan de chocolate (12 cms)</h4></div><span class="price">$2.200</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Rollo de canela</h4></div><span class="price">$2.000</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Medialuna</h4></div><span class="price">$1.800</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Pie de limón</h4></div><span class="price">$3.000</span></div>
-        </div>
-
-        <!-- Categoría 3: Sandwiches & Desayunos -->
-        <h3 class="category-title mt-4">Sándwiches y Desayunos</h3>
-        <img src="cafe.png" alt="Desayunos y café" class="category-banner">
-        <div class="menu-grid">
-            <div class="menu-card"><div class="item-info"><h4>Croissant jamón/queso</h4></div><span class="price">$4.900</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Planchado jamón/queso</h4></div><span class="price">$4.500</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Desayuno 1</h4><p>Bebida caliente + Mini panes + Bollería</p></div><span class="price">$4.990</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Desayuno 2</h4><p>Bebida caliente + Planchado + Bollería</p></div><span class="price">$5.990</span></div>
-        </div>
-        
-        <!-- Categoría 4: Promociones -->
-        <h3 class="category-title mt-4">Promociones</h3>
-        <div class="menu-grid">
-            <div class="menu-card"><div class="item-info"><h4>Promo 1</h4><p>Bebida caliente + Medialuna</p></div><span class="price">$3.490</span></div>
-            <div class="menu-card"><div class="item-info"><h4>Promo 2</h4><p>Bebida caliente + Bollería a elección</p></div><span class="price">$3.590</span></div>
+    <!-- Sección: Nuestra Carta (Grilla de imágenes) -->
+    <section id="carta" class="carta-section">
+        <h2 class="section-title">Nuestra Carta</h2>
+        <div class="carta-grid">
+            <div class="carta-item" style="background-image: url('cafe_arte.png');">
+                <div class="carta-overlay">{Cafetería} Extracción perfecta de cada grano.</div>
+            </div>
+            <div class="carta-item" style="background-image: url('bolleria.jpg');">
+                <div class="carta-overlay">{Bollería} Horneada diariamente.</div>
+            </div>
+            <div class="carta-item" style="background-image: url('cafe.png');">
+                <div class="carta-overlay">{Desayunos y Sándwiches} Para empezar el día.</div>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <p>Visítanos en Av. Vitacura 6721</p>
-        <p>© 2026 Café Nuestro. Todos los derechos reservados.</p>
+    <!-- Sección: Conócenos (En su "burbuja" o contenedor) -->
+    <section id="conocenos" class="about-section">
+        <div class="about-box">
+            <h2>Quiénes Somos</h2>
+            <p>En <strong>Café Nuestro</strong> no dejamos las cosas al azar. Extraemos lo mejor de cada grano en un ambiente diseñado para que hagas una pausa, trabajes o compartes. Con panadería propia y bollería artesanal, cada detalle está pensado para ofrecerte calidad real todos los días en Av. Vitacura.</p>
+        </div>
+    </section>
+
+    <!-- Footer Oscuro -->
+    <footer class="footer-dark">
+        <div class="footer-grid">
+            <div class="footer-logo">
+                <img src="logo_extraido_web.png" alt="Logo Café Nuestro">
+            </div>
+            <div class="footer-col">
+                <h4>Conócenos</h4>
+                <a href="#">Ubicación</a>
+                <a href="#">Contacto</a>
+                <a href="#">Términos y condiciones</a>
+            </div>
+            <div class="footer-col">
+                <h4>Redes sociales</h4>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="footer-col">
+                <h4>Mi cuenta</h4>
+                <a href="#">Pedir</a>
+                <a href="#">Iniciar sesión</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Powered by Licitación Café Nuestro</p>
+        </div>
     </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/56900000000" class="whatsapp-btn" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 </body>
 </html>

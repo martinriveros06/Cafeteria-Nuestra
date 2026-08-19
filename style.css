@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #5b6c56; /* Verde corporativo */
-    --primary-dark: #3a4537;
-    --accent-color: #e5d8c8; /* Crema corporativo */
-    --bg-color: #fcfbf9;
-    --text-color: #333333;
-    --font-headings: 'Lora', serif;
+    --bg-color: #f3f0e8; /* Tono beige/crema de Zía Bistró */
+    --text-dark: #2b2b2b;
+    --text-light: #666666;
+    --navbar-bg: #232323;
+    --card-bg: #ffffff;
     --font-main: 'Montserrat', sans-serif;
+    --whatsapp-green: #25D366;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -13,97 +13,102 @@
 body {
     font-family: var(--font-main);
     background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
+    color: var(--text-dark);
 }
 
-h1, h2, h3, h4 {
-    font-family: var(--font-headings);
-    font-weight: 600;
-}
-
-/* Navegación */
+/* Navbar Oscuro */
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
-    background-color: white; padding: 1rem 3rem;
-    position: sticky; top: 0; z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    background-color: var(--navbar-bg); padding: 10px 40px;
+    position: sticky; top: 0; z-index: 1000;
 }
-.logo-img { height: 70px; width: auto; }
-.nav-links { list-style: none; display: flex; gap: 2rem; }
-.nav-links a { color: var(--primary-color); text-decoration: none; font-weight: 600; font-size: 1rem; transition: 0.3s;}
-.nav-links a:hover { color: var(--accent-color); }
+.logo-img { height: 60px; filter: brightness(0) invert(1); /* Pone el logo en blanco */ }
+.nav-links { display: flex; gap: 25px; }
+.nav-links a { color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 300; }
+.nav-icons { color: #fff; font-size: 1.2rem; cursor: pointer; }
 
-/* Hero Section */
+/* Hero */
 .hero {
-    height: 70vh;
-    display: flex; align-items: center; justify-content: center; text-align: center;
-    /* Corrección del fondo para que no se repita y cubra bien */
-    background-image: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)), url('tomando-cafe.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    color: white; padding: 0 20px;
+    height: 60vh;
+    display: flex; align-items: center; justify-content: center;
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+    text-align: center; color: white;
 }
-.hero h1 { font-size: 4rem; margin-bottom: 15px; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
-.hero p { font-size: 1.3rem; margin-bottom: 30px; font-weight: 300; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
-.btn {
-    display: inline-block; padding: 15px 35px;
-    background-color: var(--accent-color); color: var(--primary-dark);
-    text-decoration: none; border-radius: 40px; font-weight: 600; font-size: 1.1rem;
-    transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-.btn:hover { background-color: var(--primary-color); color: white; transform: translateY(-3px); }
-
-/* Sección Quiénes Somos */
-.about-section { padding: 5rem 2rem; background-color: var(--accent-color); }
-.about-container { 
-    display: flex; flex-direction: row; gap: 50px; 
-    align-items: center; max-width: 1100px; margin: auto;
-}
-.about-text { flex: 1; }
-.about-text h2 { color: var(--primary-dark); font-size: 2.5rem; margin-bottom: 20px; }
-.about-text p { font-size: 1.1rem; margin-bottom: 15px; color: var(--primary-dark); text-align: justify; }
-.about-image-wrapper { flex: 1; }
-.about-img { width: 100%; height: 350px; object-fit: cover; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-
-/* Menú Section */
-.menu-section { padding: 5rem 2rem; max-width: 1100px; margin: auto; }
-.section-title { text-align: center; font-size: 3rem; color: var(--primary-color); margin-bottom: 3rem; }
-.category-title { font-size: 2rem; color: var(--primary-dark); border-bottom: 3px solid var(--accent-color); padding-bottom: 10px; margin-bottom: 25px; }
-.mt-4 { margin-top: 5rem; }
-
-/* Control estricto del tamaño de los banners del menú */
-.category-banner { 
-    width: 100%; 
-    height: 180px; 
-    object-fit: cover; 
-    border-radius: 12px; 
-    margin-bottom: 30px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+.hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; }
+.btn-dark {
+    display: inline-block; padding: 12px 30px;
+    background-color: rgba(35, 35, 35, 0.85); color: white;
+    text-decoration: none; border-radius: 5px; font-weight: 400; font-size: 1rem;
 }
 
-.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
-.menu-card {
-    display: flex; justify-content: space-between; align-items: center;
-    background: white; padding: 20px 25px; border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.06); border-left: 5px solid var(--primary-color);
-    transition: transform 0.2s ease;
+/* Tira de Categorías */
+.category-strip {
+    text-align: center; padding: 30px 20px;
+    font-size: 1.4rem; font-weight: 400; color: #4a5568;
 }
-.menu-card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
-.item-info h4 { font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 5px; }
-.item-info p { font-size: 0.9rem; color: #666; font-family: var(--font-main); }
-.price { font-weight: 600; color: var(--primary-color); font-size: 1.3rem; white-space: nowrap; margin-left: 20px;}
 
-/* Footer */
-.footer { text-align: center; padding: 3rem 2rem; background-color: var(--primary-dark); color: var(--accent-color); }
-.footer p { margin-bottom: 10px; font-size: 1rem; }
+/* Secciones Generales */
+.section-title { text-align: center; font-size: 2.2rem; color: #3a4750; margin-bottom: 40px; font-weight: 600; }
 
-/* Responsividad */
+/* Recomendaciones (Tarjetas estilo Zía) */
+.recomendaciones-section { padding: 40px 5%; }
+.card-grid {
+    display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px;
+    justify-content: center; flex-wrap: wrap;
+}
+.product-card {
+    background-color: var(--card-bg); width: 260px;
+    border-radius: 8px; overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); display: flex; flex-direction: column;
+}
+.card-img { width: 100%; height: 200px; object-fit: cover; background-color: #ddd; }
+.card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+.card-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; text-transform: uppercase; }
+.card-body p { font-size: 0.85rem; color: var(--text-light); margin-bottom: 15px; flex-grow: 1; }
+.price { font-size: 1.1rem; font-weight: 400; margin-bottom: 15px; }
+.ver-producto { font-size: 0.85rem; color: var(--text-light); text-decoration: none; }
+
+/* Nuestra Carta (Grilla de imágenes) */
+.carta-section { padding: 40px 5%; }
+.carta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.carta-item {
+    height: 250px; border-radius: 10px; background-size: cover; background-position: center;
+    position: relative; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.carta-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white; font-size: 1.1rem; font-weight: 400;
+}
+
+/* Burbuja Conócenos */
+.about-section { padding: 60px 20px; display: flex; justify-content: center; }
+.about-box {
+    background-color: white; max-width: 800px; padding: 50px;
+    border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center;
+}
+.about-box h2 { font-size: 2rem; margin-bottom: 20px; color: #3a4750; }
+.about-box p { font-size: 1.1rem; color: var(--text-light); line-height: 1.8; }
+
+/* Footer Oscuro */
+.footer-dark { background-color: var(--navbar-bg); color: white; padding: 60px 10%; margin-top: 50px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 30px; margin-bottom: 40px; }
+.footer-logo img { height: 80px; filter: brightness(0) invert(1); }
+.footer-col h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; }
+.footer-col a { display: block; color: #ccc; text-decoration: none; font-size: 0.9rem; margin-bottom: 10px; font-weight: 300; }
+.footer-bottom { text-align: center; border-top: 1px solid #444; padding-top: 20px; font-size: 0.8rem; color: #888; }
+
+/* Botón WhatsApp */
+.whatsapp-btn {
+    position: fixed; bottom: 30px; right: 30px;
+    background-color: var(--whatsapp-green); color: white;
+    width: 60px; height: 60px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 35px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1000;
+}
+
 @media (max-width: 768px) {
-    .navbar { flex-direction: column; padding: 1rem; }
-    .nav-links { gap: 1rem; margin-top: 15px; }
-    .hero h1 { font-size: 2.8rem; }
-    .about-container { flex-direction: column; text-align: center; }
-    .about-text p { text-align: center; }
+    .navbar { flex-direction: column; padding: 15px; gap: 15px; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero h1 { font-size: 2.5rem; }
 }
