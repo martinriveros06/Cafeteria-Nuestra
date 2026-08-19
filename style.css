@@ -1,9 +1,8 @@
-/* Variables CSS para escalar y cambiar colores rápidamente */
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #d35400;
-    --bg-color: #f9f9f9;
-    --text-color: #333;
+    --primary-color: #5b6c56; /* Verde característico del logo y la carta */
+    --accent-color: #e5d8c8; /* Tono crema para contrastar */
+    --bg-color: #fcfbf9;
+    --text-color: #333333;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -20,14 +19,19 @@ body {
     line-height: 1.6;
 }
 
-/* Navegación */
+/* Navegación y Logo */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     padding: 1rem 2rem;
-    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
 }
 
 .nav-links {
@@ -37,25 +41,25 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
-    height: 60vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x800') center/cover;
+    background-color: var(--primary-color);
     color: white;
     padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
@@ -64,9 +68,9 @@ body {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: var(--accent-color);
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: bold;
 }
 
@@ -87,7 +91,8 @@ body {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     text-align: left;
 }
 
@@ -95,7 +100,8 @@ body {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
 }
 
 /* Footer */
@@ -106,13 +112,12 @@ body {
     color: white;
 }
 
-/* Responsividad para móviles */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
